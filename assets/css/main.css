@@ -6,7 +6,7 @@ body{
 
 body#home_page{
     grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
-    grid-template-rows: 100px 600px 200px 300px 100px 200px ;
+    grid-template-rows: 80px 600px 200px 300px 100px 200px ;
     grid-template-areas: 
     "header header header header header"
     "first_section first_section first_section first_section first_section"
@@ -18,36 +18,98 @@ body#home_page{
     ;
 }
 
+/* ------------Start Navigation------------ */
+
 header{
     grid-area:header;
     background: #ffffff;
     display: grid;
 }
 
-nav ul{
+header div#navigation{
+    background:white;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    border-bottom: 1px solid #EBEBEB;
     display: grid;
-    grid-template-columns: repeat(5, 70px);
-    padding: 0;
-    margin: 0;
+    grid-template-columns: 50px 150px 300px 280px 310px ;
+    grid-template-areas: 
+    " . name nav . search icons"
+    ;
+    /* box-shadow: 0 10px 18px rgba(0,0,0,0.02), 0 10px 10px rgba(0,0,0,0.09); */
+}
+
+header div#navigation nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+}
+
+header div#navigation nav ul li{
     list-style: none;
-    gap: 20px
 }
 
-
-nav ul li a {
-    display: block;
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
+header div#navigation nav ul li a{
     text-decoration: none;
-    color: #878787;
-    font-size: 18px;
-    letter-spacing: 2px;
+    line-height: 40px;
+    color: gray;
+}
+
+header div#navigation h1{
+    grid-area: name;
+}
+
+header div#navigation nav{
+    grid-area: nav;
+}
+
+header div#navigation div#search{
+    grid-area: search;
+}
+
+header div#navigation div#search input{
+    height: 79px;
+    border: none;
+    border-left: 1px solid #EBEBEB;
+    transition-duration: 500ms;
+}
+
+header div#navigation div#search input:focus{
+    outline: none;
+}
+
+header div#navigation div#icons{
+    grid-area: icons;
+    margin: 0;
+    display: flex;
+}
+
+header div#navigation div#icons img{
+    width: 86px;
+    height: 77px;
+}
+
+header div#navigation div#icons div:nth-child(1){
+    border-left: 1px #EBEBEB solid;
+    border-right: 1px #EBEBEB solid;
+}
+
+header div#navigation div#icons div:nth-child(2){
+    border-right: 1px #EBEBEB solid;
+}
+
+header div#navigation div#icons div:nth-child(3){
+    border-right: 1px #EBEBEB solid;
 }
 
 
 
-#first_section{
+/* --------------End Navigation--------------------- */
+
+/* -----------------Start ----------------------- */
+
+section#first_section{
     display: grid;
     grid-area: first_section;
     background-image: url(/assets/img/bg-1.jpg);
@@ -57,32 +119,32 @@ nav ul li a {
     background-position: center center;
 }
 
-#second_section{
+section#second_section{
     grid-area: second_section;
     border:2px solid red;
     display: grid;
 }
 
-#third_section{
+section#third_section{
     grid-area: third_section;
     border:2px solid red;
     display: grid;
 
 }
 
-#fourth_section{
+section#fourth_section{
     grid-area: fourth_section;
     border:2px solid red;
     display: grid;
 }
 
-#fifth_section{
+section#fifth_section{
     grid-area: fifth_section;
     border:2px solid red;
     display: grid;
 }
 
-#sixth_section{
+section#sixth_section{
     grid-area: sixth_section;
     border:2px solid red;
     display: grid;
