@@ -1,22 +1,22 @@
-.preloader{
+.preloader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background:black;
-    z-index:2;
+    background: #f5f7f9;
+    z-index: 111231232;
     transition: 1s all;
     opacity: 1;
     visibility: visible;
 }
 
-.loader{
+.loader {
     width: 75px;
     height: 75px;
-    border: 10px solid #fff;
+    border: 10px solid gray;
     border-radius: 50%;
-    border-top-color: gray;
+    border-top-color: blue;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -24,16 +24,16 @@
     animation: 1s anim infinite linear;
 }
 
-.done{
+.done {
     opacity: 0;
     visibility: hidden;
-} 
+}
 
 @keyframes anim {
-    0%{
+    0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-    100%{
+    100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }

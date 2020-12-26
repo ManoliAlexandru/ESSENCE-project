@@ -33,13 +33,22 @@ body#home_page {
 
 /* --- Start Navigation --- */
 header {
+    font-family: Ubuntu;
+    font-size: 16px;
     background: white;
     position: fixed;
     z-index: 9999;
     width: 100%;
     height: 80px;
-    border: 1px solid red;
+    /* box-shadow: 0 10px 18px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.09); */
+}
+
+.shadow {
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.09);
+}
+
+header nav div.container {
+    margin-top: 15px;
 }
 
 /* --- End Navigation --- */
@@ -221,7 +230,7 @@ section#fourth_section div#product {
 
 section#fourth_section div#product_item {
     display: grid;
-    grid-template-rows: 348px 10px 20px 20px;
+    grid-template-rows: 360px 20px 20px 20px;
 }
 
 /* Slider animation */
@@ -296,15 +305,16 @@ section#fourth_section div#product div#product_item span {
     color: #787878;
     letter-spacing: 0.75px;
     font-weight: bold;
-    line-height: 60px;
 }
 
 section#fourth_section div#product div#product_item h6 {
-    font-size: 1rem;
+    font-size: 14px;
     color: #222;
     font-family: Ubuntu;
     font-weight: bold;
 }
+
+/* Start secrion 5 */
 
 section#fifth_section {
     grid-area: fifth_section;
@@ -318,6 +328,10 @@ section#fifth_section div#container {
     align-items: center;
     margin-left: 40px;
 }
+
+/* End section 5 */
+
+/* ///////Start footer/////////// */
 
 footer {
     grid-area: footer;
@@ -420,8 +434,9 @@ footer h2 {
     font-size: 14px;
     font-family: Ubuntu;
 }
+/* //////////end footer////////// */
 
-/* Shop page */
+/*////////// Shop page//////////// */
 
 body#shop_page {
     grid-template-columns: 0.2fr 0.7fr 1fr 1fr 0.2fr;
@@ -431,6 +446,10 @@ body#shop_page {
         "title title title title title"
         ". filter shop_section shop_section ."
         "footer footer footer footer footer";
+}
+
+.shadow {
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.09);
 }
 
 body#shop_page section#title {
@@ -448,7 +467,7 @@ section#title div.background {
 section#title h2 {
     position: absolute;
     margin-left: 45%;
-    line-height: 100px;
+    line-height: 150px;
     text-transform: uppercase;
     font-family: Ubuntu;
     font-size: 30px;
@@ -478,6 +497,7 @@ aside#filter div.container div.categories {
     font-size: 24px;
     color: #000;
     user-select: none;
+    text-decoration: none;
 }
 
 #filter > div > div.categories ul li ul li a {
@@ -493,7 +513,7 @@ aside#filter div.container div.categories {
     transition: 0.6s linear;
 }
 
-aside#filter div.container div.categories ul.sub_menu1 {
+aside#filter div#container div.categories ul.sub_menu1 {
     display: none;
 }
 
@@ -501,12 +521,13 @@ aside#filter div.container div.categories ul.sub_menu1 {
     display: block !important;
 }
 
-aside#filter div.container div.color {
+aside#filter div#container div.color {
     display: grid;
     grid-template-rows: 50px 50px 100px;
+    margin-top: 50px;
 }
 
-aside#filter div.container div.color h2 {
+aside#filter div#container div.color h2 {
     font-family: Ubuntu;
     font-size: 24px;
     color: #000;
@@ -514,22 +535,21 @@ aside#filter div.container div.color h2 {
     margin-left: 40px;
 }
 
-aside#filter div.container div.color div.container {
+aside#filter div#container div.color div#container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 70px);
     grid-template-rows: 30px 30px;
-    column-gap: 15px;
-    row-gap: 25px;
+    row-gap: 30px;
 }
 
-aside#filter div.color div.container div {
+aside#filter div.color div#container div {
     height: 35px;
     width: 35px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
-aside#filter div.color div.container div:hover {
+aside#filter div.color div#container div:hover {
     transform: scale(1.2);
 }
 
@@ -562,9 +582,22 @@ section#shop_section {
 section#shop_section div.shop_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 35px 348px 348px 348px;
+    grid-template-rows: 90px 348px 348px 348px;
     column-gap: 50px;
-    row-gap: 120px;
+    row-gap: 100px;
+}
+
+section#shop_section div.shop_container select {
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 10px;
+    font-family: Ubuntu;
+    margin-top: 50px;
+    align-items: center;
+}
+
+section#shop_section div.shop_container select:focus {
+    outline: none;
 }
 
 /* shop item */
@@ -633,12 +666,84 @@ section#shop_section div.shop_container div#product_item span {
     color: #787878;
     letter-spacing: 0.75px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 35px;
 }
 
 section#shop_section div.shop_container div#product_item h6 {
-    font-size: 1rem;
+    font-size: 14px;
     color: #222;
     font-family: Ubuntu;
     font-weight: bold;
+}
+
+/* ////////DOWN PAGE SELECTOR////////// */
+
+section#shop_section div.page_selector div.page_container {
+    display: grid;
+    grid-template-columns: 40px 200px 40px;
+    column-gap: 20px;
+}
+
+section#shop_section div.page_selector div.page_container div.page_selector_container {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    position: relative;
+}
+
+div.pages a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: #787878;
+    text-decoration: none;
+    font-family: Ubuntu;
+}
+
+div.pages a:hover {
+    color: blue;
+    transition: 0.2s linear;
+}
+
+section#shop_section div.page_selector div.page_container div.pages {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ebebeb;
+}
+
+section#shop_section div.page_selector div.page_container div.pages:hover {
+    background-color: #e5e5e5;
+    transition: 0.2s linear;
+}
+
+section#shop_section div.page_selector div.page_container div.arrow {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#shop_section div.page_selector div.page_container div.arrow a {
+    color: #787878;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section#shop_section div.page_selector div.page_container div.arrow a:hover {
+    color: blue;
+    transition: 0.2s linear;
+}
+
+section#shop_section div.page_selector div.page_container div.arrow:hover {
+    background-color: #e5e5e5;
+    transition: 0.2s linear;
+}
+
+/* checkout */
+
+body#checkout {
+    font-family: Ubuntu;
 }

@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <!-- Bootstrap jquery -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Css -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- <link rel="stylesheet" href="assets/css/preloader.css"> -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,8 +20,72 @@
 </head>
 
 <body id="shop_page">
-
-    <header></header>
+    <div id="page_preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-findcond navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Shop <span
+                                    class="badge">NEW</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="shop.html"><i class="fa fa-fw fa-tag"></i> <span class="badge"></span>
+                                        <span class="badge"></span>Clothing</a></li>
+                                <li><a href="shop.html"><i class="fa fa-fw fa-thumbs-o-up"></i> <span
+                                            class="badge">NEW</span>
+                                        Shoes</a></li>
+                                <li><a href="shop.html"><i class="fa fa-fw fa-thumbs-o-up"></i> <span
+                                            class="badge"></span>
+                                        Accesories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Pages <span
+                                    class="badge">3</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="checkout.html"><i class="fa fa-fw fa-thumbs-o-up"></i> <span
+                                            class="badge">3</span>
+                                        Checkout</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="active"><a href="#">Log In <span class="sr-only">(current)</span></a></li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false">Log In <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">My account</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Setting</a></li>
+                                <li><a href="#exit">Exit</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-form" role="search">
+                        <input type="text" class="form-control" placeholder="Search" />
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <section id="title">
         <div class="background"></div>
@@ -23,7 +93,7 @@
     </section>
 
     <aside id="filter">
-        <div class="container">
+        <div id="container">
             <div class="categories">
                 <ul class="categories_cotent">
                     <li>
@@ -39,22 +109,21 @@
 
             <div class="color">
                 <h2>Color</h2>
-                <div class="container">
+                <div id="container">
                     <div style="background-color: black;"></div>
                     <div style="background-color: blue;"></div>
                     <div style="background-color: blueviolet;"></div>
-                    <div style="background-color: white;"></div>
+                    <div style="background-color: orange;"></div>
                     <div style="background-color: pink;"></div>
                     <div style="background-color: peru;"></div>
                     <div style="background-color: chartreuse;"></div>
                     <div style="background-color: yellow;"></div>
-                    <div style="background-color: maroon;"></div>
-                    <div style="background-color: teal;"></div>
+
                 </div>
             </div>
             <div class="brands">
                 <h2>Brands</h2>
-                <div class="container">
+                <div id="container">
                     <ul>
                         <li><a href="#">Asos</a></li>
                         <li><a href="#">Mango</a></li>
@@ -70,13 +139,25 @@
     <section id="shop_section">
         <div class="shop_container">
             <select name="" id="">
-                <option value="sd">asd</option>
+                <option value="">HIGHEST RATE</option>
+                <option value="">NEWEST</option>
+                <option value="">PRICE: $-$$</option>
+                <option value="">PRICE: $$-$</option>
             </select>
             <select name="" id="">
-                <option value="sd">asd</option>
+                <option value="">SIZE</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+                <option value="">XXL</option>
             </select>
             <select name="" id="">
-                <option value="sd">asd</option>
+                <option value="">TYPE</option>
+                <option value="">Cloth</option>
+                <option value="">Shoes</option>
+                <option value="">Accesories</option>
+                <option value="">...</option>
             </select>
 
             <div id="product_item">
@@ -132,6 +213,24 @@
                 <span>topshop</span>
                 <h6>One Shoulder Glitter Midi Dress</h6>
                 <h6>$550</h6>
+            </div>
+        </div>
+        <div class="page_selector">
+            <div class="page_container">
+                <div class="arrow">
+                    <div><a href="#">&larr;</a></div>
+                </div>
+                <div class="page_selector_container">
+                    <div class="pages"><a href="#">1</a></div>
+                    <div class="pages"><a href="#">2</a></div>
+                    <div class="pages"><a href="#">3</a></div>
+                    <div class="pages"><a href="#">...</a></div>
+                    <div class="pages"><a href="#">9</a></div>
+                </div>
+
+                <div class="arrow">
+                    <div><a href="#">&rarr;</a></div>
+                </div>
             </div>
         </div>
     </section>
@@ -194,6 +293,8 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="/assets/js/prelaoder.js"></script>
+    <script src="/assets/js/scroll.js"></script>
 </body>
 
 </html>
